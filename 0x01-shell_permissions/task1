@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -e "#!/bin/bash\nchown betty:holberton *" >>100-change_owner_and_group
+echo -e "#!/bin/bash\nchown -h betty:holberton *" >>101-symbolic_link_permissions
+echo -e "#!/bin/bash\nchown --from=guillaume betty hello" >>102-if_only
+echo -e "#!/bin/bash\ntelnet towel.blinkenlights.nl" >>103-star_wars
+chmod u+x *
+cd ..
+git status && git add --all && git commit -m "Advanced shell permissions" && git status && git push origin master
