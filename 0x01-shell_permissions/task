@@ -1,0 +1,17 @@
+#!/bin/bash
+echo -e "#!/bin/bash\nwhoami" >>1-who_am_i
+echo -e "#!/bin/bash\ngroups" >>2-groups
+echo -e "#!/bin/bash\nchown betty hello" >>3-new_owner
+echo -e "#!/bin/bash\ntouch hello" >>4-empty
+echo -e "#!/bin/bash\nchmod u+x hello" >>5-execute
+echo -e "#!/bin/bash\nchmod ug+x,o+r hello" >>6-multiple_permission
+echo -e "#!/bin/bash\nchmod ugo+x hello" >>7-everybody
+echo -e "#!/bin/bash\nchmod 007 hello" >>8-James_Bond
+echo -e "#!/bin/bash\nchmod 753 hello" >>9-John_Doe
+echo -e "#!/bin/bash\nchmod --reference=olleh hello" >>10-mirror_permissions
+echo -e "#!/bin/bash\nsudo chmod -R 111 */" >>11-directories_permissions
+echo -e "#!/bin/bash\nmkdir -m 751 dir_holberton" >>12-directory_permissions
+echo -e "#!/bin/bash\nchgrp hoberlton hello" >>13-change_group
+chmod u+x *
+cd ..
+git status && git add --all && git commit -m "shell permissions" && git push origin master
