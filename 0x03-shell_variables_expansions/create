@@ -1,0 +1,8 @@
+#!/bin/bash
+echo -e "#!/bin/bash\ntr 'A-Za-z' 'N-ZA-Mn-za-m'" >>101-rot13
+echo -e "#!/bin/bash\nprintf '%x\n' $DECIMAL" >>100-decimal_to_hexadecimal
+echo -e "#!/bin/bash\npaste -d, - - | cut -d, f1" >>102-odd
+echo -e "#!/bin/bash\nprintf "%\n" $(($((5#$(echo $WATER | tr water 01234))) + $((5#$(echo $STIR | tr stir.01234))) )) | tr 01234567 behlnort" >>103-water_and_stir
+chmod u+x 101-rot13 100-decimal_to_hexadecimal 102-0dd 103-water_and_stir
+cd ..
+git status && git add --all && git status && git commit -m "Test" && git push origin master
