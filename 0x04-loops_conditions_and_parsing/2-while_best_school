@@ -1,8 +1,10 @@
 #!/usr/bin/env bash
 # loop using while
-# Shellcheck style wants dummy _ variable if not using 
 
-while true;
+x=1
+
+while [ $x -le 11 ];
 do
 	echo "Best School"
+	x=$(( $x + 1 ))
 done
