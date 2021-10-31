@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+# This script displays "Holberton School" 10 times
+
+x=0
+while (( x < 10));
+do
+	if (( x == 8 ))
+	then 
+		echo "Hi";
+	else
+		echo "Best School"
+	fi
+	(( x++ ));
+done
