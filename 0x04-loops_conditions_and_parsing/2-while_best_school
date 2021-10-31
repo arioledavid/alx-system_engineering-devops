@@ -1,10 +1,9 @@
 #!/usr/bin/env bash
-# loop using while
-#Shellcheck 
-x=1
+# This script displays "Holberton School" 10 times
 
-while [ $x -le 11 ];
+x=0
+while (( x < 10));
 do
-	echo "Best School"
-	x=$(( $x + 1 ))
+	echo "Holberton School";
+	(( x++ ));
 done
