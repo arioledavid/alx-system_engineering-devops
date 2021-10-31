@@ -1,0 +1,8 @@
+#!/usr/bin/env bash
+# loop using while
+# Shellcheck style wants dummy _ variable if not using 
+
+while true;
+do
+	echo "Best School"
+done
