@@ -4,20 +4,11 @@
 x=1
 while (( x < 21));
 do
-	if (( x == 4 ))
-	then 
-		echo $x
-		echo "bad luck from China"
-	elif (( x == 9 ))
-	then
-		echo $x
-		echo "bad luck from Japan"
-	elif (( x == 17 ))
-	then
-		echo $x
-		echo "bad luck from Italy"
-	else
-		echo $x
-	fi
-	(( x++ ));
+	echo "$i"
+	case $i in
+		4) echo "bad luck from China" ;;
+		9) echo "bad luck from Japan" ;;
+		17) echo "bad luck from Italy" ;;
+	esac
+	(( x++ ))
 done
