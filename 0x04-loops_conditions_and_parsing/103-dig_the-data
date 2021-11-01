@@ -1,0 +1,6 @@
+#!/usr/bin/env bash
+# This script parses file for IP and HTTP fields wit awk
+# sort from greatest to list
+
+file="apache-access.log"
+awk '{print $1, $9}' $file | sort | uniq -c | sort -nr
