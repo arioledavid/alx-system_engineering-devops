@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 #FizzBuzz - print 1 to 100, "fizz" for multiples of 3, "buzz" for multiples of 5
 
-for (( x=1; < 101; x++ ))
+for (( x=1;  x < 101; x++ ))
 do
 	if (( x % 15 == 0 ));
 	then
@@ -13,6 +13,6 @@ do
         then
              echo "Buzz"
         else
-             echo "$i"
+             echo $x
         fi
 done	
