@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # This Bash script displays lines containing the bash word
 # shellcheck diable=SC200
-# ignore shellcheck suggestion for pgrep
 
 ps -auxf | grep "bash"
