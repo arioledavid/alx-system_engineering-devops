@@ -1,4 +1,4 @@
-#!/usr/bin/env bas
+#!/usr/bin/env bash
 # Creates a file with it's pid and deletes on command
 
 move_file()
