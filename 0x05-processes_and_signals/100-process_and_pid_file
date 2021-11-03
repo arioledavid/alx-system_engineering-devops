@@ -9,7 +9,7 @@ move_file()
 
 trap "echo 'Y U no love me?!'" SIGINT
 trap "echo 'I hate the kill comand'; move_file" SIGTERM
-trap "move_file" SIGQUIT
+trap "echo 'I hate the kill command'; move_file" SIGQUIT
 
 echo $$ >> /var/run/myscript.pid
 while (true)
