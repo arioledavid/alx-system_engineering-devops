@@ -1,0 +1,32 @@
+#!/usr/bin/env bash
+# This script starts, stops and restarts 
+
+argv_1=$1
+tmpfile="/var/run/my_process.pid"
+
+startScript()
+{
+	./manage_my_process &
+	touch /var/run/my_process.pid
+	echo "$!" > "$tmpfile"
+}
+stopScript()
+{
+	sudo pkill -f "./manage_my_process"
+	kill "$(cat "$tmpfile")"
+	rm "$tmpfile"
+}
+case "$argv_1" in
+	start) echo "manage_my_process started"
+		startScript
+		;;
+	stop) echo "manage_my_process stopped"
+		stopScript
+		;;
+	restart) echo "manage_my_process restarted"
+		stopScript
+		startScript
+		;;
+	*) echo "Usage: manage_my_process {start|stop|restart}"
+		;;
+esac
